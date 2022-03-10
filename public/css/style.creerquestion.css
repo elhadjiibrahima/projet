@@ -1,0 +1,107 @@
+.CreationQuestion{
+    width: 95%;
+    height: 100%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    ;
+}
+.CreationQuestion h1{
+    text-align:center;
+    height: 10%;
+    font-size: 1.5em;
+    color: aqua;
+    padding-top: 2%;
+    /* margin-bottom: 2%; */
+}
+.creerquestion{
+   border: 1px solid aquamarine;
+   height: 90%;
+   font-size: 2em;
+   display: flex;
+   flex-direction: column;
+}
+/* .creerquestion div{
+    height: 20%;
+    /* border: solid black; 
+    margin: 1%;
+
+} */
+.question{
+    height: 20%;
+    margin: 1%;
+    display: flex;
+    justify-content: space-around;
+}
+.nbrReP {
+    height: 10%;
+    margin: 1%;
+    display: flex;
+    justify-content: space-around;
+    padding-right: 50%;
+}
+.nbrReP input{
+    width: 40px;
+    margin-left: -20%;
+}
+.typeRep{
+    height: 10%;
+    margin: 1%;
+    display: flex;
+    justify-content: space-around;
+    padding-right: 40%;
+}
+.typeRep img{
+    cursor: pointer;
+}
+.jsrep{
+    height: 60%;
+    margin: 1%;
+    margin: 1%;
+    /* border: solid; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+.reponse{
+    height: 15%;
+    width: 100%;
+    margin: 2%;
+    /* display: flex; */
+    /* justify-content: space-around; */
+}
+.reponse #rep{
+    width: 45%;
+    height: 98%;
+}
+.reponse #checkbox{
+    width: 06%;
+    height: 98%;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+.reponse #radio{
+    width: 06%;
+    height: 98%;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+.enregister{
+    position: fixed;
+    right: 3%;
+    bottom:2%;
+
+}
+.enregister button{
+    width: 100%;
+    
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 4px 5px black;
+    border-radius: 10px;
+    background-color: aqua;
+}
