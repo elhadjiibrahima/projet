@@ -83,7 +83,7 @@ function connexion( string $login, string $password ):void {
 
     // todo vérification password
     champ_obligatoire( 'password', $password, $errors, 'Mot de passe obligatoire' );
-    if ( !isset( $errors[ 'login' ] ) ) {
+    if ( !isset( $errors[ 'password' ] ) ) {
         // valid_password( 'password', $password, $errors );
     }
 
@@ -182,11 +182,12 @@ function collectInfos(array &$infos_new_user,string $role=ROLE_JOUEUR):array{
     $infos_new_user["nom"]=nettoyer_chaine($_POST['nom']);
     $infos_new_user["prenom"]=nettoyer_chaine($_POST['prenom']);
     $infos_new_user["login"]=nettoyer_chaine($_POST['login']);
-    $infos_new_user["password1"]=nettoyer_chaine($_POST['password1']);
+    $infos_new_user["password"]=nettoyer_chaine($_POST['password']);
     $infos_new_user["password2"]=nettoyer_chaine($_POST['password2']);
     $infos_new_user["role"]=$role;
     $infos_new_user["score"]=0;
     $infos_new_user["avatar"]=(!empty($_FILES['fileUpload']['name']))? $_FILES['fileUpload']["name"]:'default_avatar';
+    // var_dump($infos_new_user);
     return $infos_new_user;
 }
 
@@ -197,7 +198,7 @@ function register_user(array $infos_new_user):void{
     champ_obligatoire( 'nom', $infos_new_user['nom'], $errors, 'Nom obligatoire' );
     champ_obligatoire( 'prenom', $infos_new_user['prenom'], $errors, 'Prénom obligatoire' );
     champ_obligatoire( 'loginReg', $infos_new_user['login'], $errors, 'Login obligatoire' );
-    champ_obligatoire( 'password1', $infos_new_user['password1'], $errors, 'password1 obligatoire' );
+    champ_obligatoire( 'password', $infos_new_user['password'], $errors, 'password obligatoire' );
     champ_obligatoire( 'password2', $infos_new_user['password2'], $errors, 'password2 obligatoire' );
     if(is_user_in_file($infos_new_user)){
         $errors['already_log_in']="Cet utilisateur existe déjà.Choissisez un autre login";

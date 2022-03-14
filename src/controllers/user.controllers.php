@@ -98,7 +98,7 @@ function presenter_vue_l_joueurs(string $view,string $the_controller):void{
     ob_start();
     $tab_joueurs = find_users_by_role(ROLE_JOUEUR);
     /////////////////////////////////////////
-    define('nombredejoueur_parpage',5);
+    define('nombredejoueur_parpage',  `   );
     $nbre_joueurs=count($tab_joueurs);
     $nbrede_page=ceil($nbre_joueurs/nombredejoueur_parpage);
     if(isset($_GET['page'])){
@@ -139,3 +139,9 @@ function presenter_vue(string $view,string $the_controller):void{
     require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."accueil.html.php");
     require_once(PATH_VIEWS."user".DIRECTORY_SEPARATOR."dashboard.html.php");
 }
+
+
+
+//   extract($_POST["question"],$_POST["cr-point"]);
+extract($_POST);
+var_dump($_POST);

@@ -1,107 +1,144 @@
-.CreationQuestion{
-    width: 95%;
-    height: 100%;
+.cr-contain-create {
+    /* border: 1px solid black; */
+    width: 100%;
     color: black;
-    display: flex;
-    flex-direction: column;
-    ;
-}
-.CreationQuestion h1{
-    text-align:center;
-    height: 10%;
+  }
+  .cr-header {
+    color: rgb(57, 221, 214);
+  }
+  .cr-header h1 {
+    margin-left: 0;
+    text-align: center;
     font-size: 1.5em;
-    color: aqua;
-    padding-top: 2%;
-    /* margin-bottom: 2%; */
-}
-.creerquestion{
-   border: 1px solid aquamarine;
-   height: 90%;
-   font-size: 2em;
-   display: flex;
-   flex-direction: column;
-}
-/* .creerquestion div{
-    height: 20%;
-    /* border: solid black; 
-    margin: 1%;
-
-} */
-.question{
-    height: 20%;
-    margin: 1%;
-    display: flex;
-    justify-content: space-around;
-}
-.nbrReP {
-    height: 10%;
-    margin: 1%;
-    display: flex;
-    justify-content: space-around;
-    padding-right: 50%;
-}
-.nbrReP input{
-    width: 40px;
-    margin-left: -20%;
-}
-.typeRep{
-    height: 10%;
-    margin: 1%;
-    display: flex;
-    justify-content: space-around;
-    padding-right: 40%;
-}
-.typeRep img{
-    cursor: pointer;
-}
-.jsrep{
-    height: 60%;
-    margin: 1%;
-    margin: 1%;
-    /* border: solid; */
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    
-}
-
-.reponse{
-    height: 15%;
-    width: 100%;
+  }
+  .cr-contain-question {
+    border: 1px solid rgb(57, 221, 214);
+    border-radius: 20px;
+    height: 85%;
     margin: 2%;
-    /* display: flex; */
-    /* justify-content: space-around; */
-}
-.reponse #rep{
-    width: 45%;
-    height: 98%;
-}
-.reponse #checkbox{
-    width: 06%;
-    height: 98%;
-    margin-top: 1%;
-    margin-left: 1%;
-}
-.reponse #radio{
-    width: 06%;
-    height: 98%;
-    margin-top: 1%;
-    margin-left: 1%;
-}
-
-.enregister{
-    position: fixed;
-    right: 3%;
-    bottom:2%;
-
-}
-.enregister button{
+  }
+  .cr-head-quest {
+    display: flex;
+    min-height: 15%;
+    width: 95%;
+    margin-top: inherit;
+  }
+  .cr-Question {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+  }
+  .cr-head-blanc-space {
+    flex: 6;
+    width: 30vw;
+    height: 10vh;
+    box-shadow: 1px 1px rgb(57, 221, 214);
+  }
+  .cr-head-blanc-space textarea {
+    background-color: rgb(247, 247, 247);
+    font-size: 1.2rem;
+    min-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+  }
+  #cr-question-form {
+    flex-direction: column;
+  }
+  #cr-question-form input {
+    background-color: rgb(247, 247, 247);
+  }
+  #cr-question-form select {
+    box-shadow: 1px 1px rgb(57, 221, 214);
+    background-color: rgb(247, 247, 247);
+    width: 20vw;
+    height: 5vh;
+    margin-left: 3%;
+  
+    min-height: 30px;
+  }
+  .cr-contain-form {
+    display: flex;
+    margin-top: 2vh;
+    margin-left: 4%;
+    flex-direction: column;
+    justify-content: start;
+    /* border: 1px solid black; */
+    height: 85%;
+  }
+  
+  #cr-point{
+    background-color: rgb(247, 247, 247);
+    width: 5vw;
+    height: 4vh;
+    margin-left: 3%;
+  }
+  input[id="cr-txt"]{
+  width: 20vw;
+  height: 5vh;
+  margin-left: 3%;
+  
+  }
+  input[id="cr-check"]{
+    height: 3vh;
+    width: 3vw;
+    align-self: center;
+  
+  }
+  input[id="cr-rad"]{
+    height: 3vh;
+    width: 3vw;
+    align-self: center;
+  }
+  .cr-form-controller{
+    display: flex;
+    margin-top: 2%;
+    align-items: center;
+  }
+  /* img[alt="ajout-reponse"]{
+    height:100%;
     width: 100%;
-    
-    font-size: 1em;
-    font-weight: bold;
     cursor: pointer;
-    box-shadow: 2px 4px 5px black;
-    border-radius: 10px;
-    background-color: aqua;
-}
+  } */
+  img[alt="img-delete"]{
+    cursor: pointer;
+  }
+  .cr-add-answerbtn{
+    height: 5vh;
+    width: 3vw;
+    border: none;
+    margin-left: 2%;
+    justify-content: center;
+    background-image: url(../img/ic-ajout-réponse.png);
+    background-size: cover;
+  }
+  .cr-delete-answerbtn{
+    background-image: url(../img/ic-supprimer.png);
+    background-size: contain;
+    background-color: #fff;
+    height: 5vh;
+    border: none;
+    width: 2vw;
+  }
+  .answer_contain{
+    display: grid;
+    height: 70%;
+    width: 70%;
+    grid-template-rows: repeat(auto-fill,10vh);
+  }
+  .cr-contain-btn {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: fit-content;
+  }
+  .cr-contain-btn button {
+    height: 4.5vh;
+    width: 10vw;
+    background-color: rgb(57, 221, 214);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.3rem;
+  }

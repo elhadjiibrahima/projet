@@ -2,9 +2,8 @@ const formReg = document.getElementById('connexion-form-inscrip');
 const nom = document.getElementById('nom');
 const prenom = document.getElementById('prenom');
 const email = document.getElementById('email');
-const password = document.getElementById('password1');
+const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
-
 //todo Functions-------------------------------------------------------------
 // ! showErrorReg
 function showErrorReg(input, message) { //Afficher les messages d'erreur
@@ -30,8 +29,12 @@ function getFieldNameReg(input) {
 // !
 function isValidEmail(email) {
     //Tester si l'email est valide
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    // const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    // const re=/^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$/
+    re = /^[a-z0-9](\.?[a-z0-9]){4,}@g(oogle)?mail\.com$/;
+
     return re.test(String(email).toLowerCase());
+    alert("ok")
 }
 
 // todo Even listeners--------------------------------------------------------

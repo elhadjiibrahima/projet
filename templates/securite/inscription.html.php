@@ -67,11 +67,11 @@ if(isset($_SESSION[KEY_ERRORS])){
 
                 <!--//! password1 -->
                 <div class="forms-group-inscrip">
-                    <Label class="label-connexion" for="password1">Password</Label>
-                    <input class="input-register" type="password"  name="password1" id="password1" class="password1" placeholder="votre mot de passe">
+                    <Label class="label-connexion" for="password">Password</Label>
+                    <input class="input-register" type="password"  name="password" id="password" class="password" placeholder="votre mot de passe">
                     <small class="the_error_small"></small>
                     <p class="the_error_small RED-ERROR">
-                        <?php if (isset($errors['password1'])){echo $errors['password1'];}?>
+                        <?php if (isset($errors['password'])){echo $errors['password'];}?>
                     </p>
                 </div>
                 
@@ -94,7 +94,7 @@ if(isset($_SESSION[KEY_ERRORS])){
                 <!--//! fichier -->
                 <div class="forms-group-inscrip choose-file">
                     <Label class="label-connexion" id="label-connexion" for="fileUpload" style="visibility: hidden;">Avatar</Label>
-                    <input class="input-register" type="file" name="fileUpload" accept="image/jpg, image/png, image/jpeg" id="fileUpload" value="" placeholder="Choississez votre avatar">
+                    <input class="input-register" type="file" name="fileUpload"  id="fileUpload" value="" placeholder="Choississez votre avatar">
                     <label class="btn-upload" for="fileUpload" id="btn-upload" style="visibility: hidden;" >Choisir un fichier</label>
                 </div>
 
